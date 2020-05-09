@@ -11,9 +11,9 @@ NewPing hcsr04(HCSR04_PIN_TRIG,HCSR04_PIN_ECHO);
 
 void setup() 
 {
-    Serial.begin(9600);
-    while (!Serial);
-    Serial.println("start");
+    //Serial.begin(9600);
+    //while (!Serial);
+    //Serial.println("start");
     pinMode(ISD1820_PIN_PLAY, OUTPUT);
 }
 
@@ -21,9 +21,9 @@ void loop()
 {
     // waiting for boy to come
     int distance = hcsr04.ping_cm();
-    Serial.print(F("Distance: "));
-    Serial.print(distance);
-    Serial.println(F("[cm]"));
+    //Serial.print(F("Distance: "));
+    //Serial.print(distance);
+    //Serial.println(F("[cm]"));
 
     // boy is close to toilet
     if (distance < BOY_DISTANCE) {
